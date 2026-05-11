@@ -1,25 +1,75 @@
 <html>
   <head>
     <title>Hello World</title>
+
     <style>
-      
+      /* selectors in css  */
+      /* universal selector
+      group selector
+      tag selector
+      id  
+      class 
+      child 
+      decendant 
+      attribute  */
+     /* selector  {
+      properties
+     } */
+      *{
+        color: red;
+        background-color: black;
+      }
+      h3,h1,h4{
+        color: aqua;
+        background-color: blanchedalmond;
+        height: 100px;
+        width: 100px;
+        border: 3px solid red;
+        font-size: xx-large;
+        /* font-style: italic; */
+        font-family:Arial, Helvetica, sans-serif;
+       
+        /* border-width: 3px;
+        border-color: rgb(46, 176, 98);
+        border-style: solid; */
+      }
+      p{
+        font-weight: lighter;
+      }
+      #first,#second{
+        color: blue;
+        background-color: aliceblue;
+      }
+
+
+
     </style>
+
 </head>
 
   <body>
-    <center><h1>Hello World</h1></center>
-    <h2>This is a Heading</h2>
+  <header></header>
+    <main>
+      <section>aboutus</section>
+      <section>Contact us</section>
+      <section>Home</section>
+
+    </main>
+    <footer>
+
+    </footer>
+    s a Heading</h2>
     <h3>This is a Sub Heading</h3>
     <h4>This is a Sub Sub Heading</h4>
     <h5>This is a Sub Sub Sub Heading</h5>
     <h6>This is a Sub Sub Sub Sub Heading3</h6>
-    <p>
+    <p id="first">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore soluta
       veritatis aliquid nostrum et expedita? Nostrum recusandae, molestias
       possimus quis illo amet ipsam repudiandae vitae magni sequi in culpa
       veniam.
     </p>
-    <p>
+    <p id="second">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quod
       debitis sit exercitationem iste ab deleniti quam odit. Placeat commodi
       quasi est. Quasi, tempora totam. Tempora voluptates sunt corporis totam.
@@ -139,11 +189,12 @@
               <input type="datetime-local" ><br>
     <form>
       <label >First name:</label><br>
-      <input type="text" ><br>
+      <input type="text" required><br>
       <label>Last name:</label><br>
-      <input type ="text">
+      <input type ="text" required>
+
  <br>
-      <button>Login</button>
+      <input type="submit">
 
       <select>
         <option>Select an option</option>
@@ -156,10 +207,10 @@
       <textarea rows="5" cols="100"></textarea>
       <!--this is a comment  -->
       <a href="https://www.google.com" target="_blank">click me</a>
-      <script>
+      <!-- <script>
         alert("hello world");
       </script>
-      
+       -->
       
     </form>
   </body>
