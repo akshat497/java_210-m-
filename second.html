@@ -41,16 +41,67 @@
         4 absolute
         5 sticky */
 
+        #parent{
+            height: 400px;
+            width: 400px;
+            background-color: yellowgreen;
+            position: relative;
+        }
+        #child{
+            height: 15px;
+            width: 15px;
+            background-color: red;
+            color: aliceblue;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            z-index: 3;
+            padding: 1%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid black; */
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 2%;
+            padding: 2%;
+            background-color: antiquewhite;
+            border: 2px solid red;
+        }
+        #third{
+            position: sticky;
+            top: 0;
+            
+            background-color: aqua;
+        }
+
 
     </style>
 </head>
 <body>
 
-    <p class="itVedant" id="relative">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat minima nam error perspiciatis, excepturi hic totam modi perferendis voluptatibus maxime fugit! Quibusdam cum magnam quod quia soluta eaque amet.</p>
+    <!-- <p class="itVedant" id="relative">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat minima nam error perspiciatis, excepturi hic totam modi perferendis voluptatibus maxime fugit! Quibusdam cum magnam quod quia soluta eaque amet.</p>
     <p class="itVedant" id="fixed">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn t</p>
     <p class="itVedant" id="absolute">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat minima nam error perspiciatis, excepturi hic totam modi perferendis voluptatibus maxime fugit! Quibusdam cum magnam quod quia soluta eaque amet.</p>
     <p class="itVedant" id="sticky">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat minima nam error perspiciatis, excepturi hic totam modi perferendis voluptatibus maxime fugit! Quibusdam cum magnam quod quia soluta eaque amet.</p>
     
-
+    <div id="parent">
+        <div id="child">
+            
+        </div>
+    </div> -->
+    <div class="box" id="first"></div>
+    <div class="box" id="second"></div>
+    <div class="box" id="third"></div>
+    <div class="box" id="fourth"></div>
+    <div class="box" id="fifth"></div>
+    <div class="box" id="sixth"></div>
+    <div class="box" id="seventh"></div>
+    <div class="box" id="eirth"></div>
+    <div class="box" id="ninth"></div>
+    <div class="box" id="tenth"></div>
 </body>
 </html>
