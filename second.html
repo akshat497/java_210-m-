@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .itVedant{
+            background-color: aqua;
+            color: red;
+            border: 2px solid black;
+            padding: 10px;
+            /* margin: 50px; */
+            /* right:0;
+            bottom:0; */
+            position: static;
+            
+            
+
+        }
+        #relative{
+            position: relative;
+            background-color: blue;
+            top: 50px;
+            left: 40px;
+            z-index: 1; 
+        }
+        #fixed{
+            width: 100px;
+            background-color: green;
+            position: fixed;
+            top:0;
+            right: 0;
+            z-index: 2;
+            
+        }
+        /* positions
+        1 static
+        2 relative
+        3 fixed
+        4 absolute
+        5 sticky */
+
+
+    </style>
+</head>
+<body>
+
+    <p class="itVedant" id="relative">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat minima nam error perspiciatis, excepturi hic totam modi perferendis voluptatibus maxime fugit! Quibusdam cum magnam quod quia soluta eaque amet.</p>
+    <p class="itVedant" id="fixed">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn t</p>
+    <p class="itVedant" id="absolute">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat minima nam error perspiciatis, excepturi hic totam modi perferendis voluptatibus maxime fugit! Quibusdam cum magnam quod quia soluta eaque amet.</p>
+    <p class="itVedant" id="sticky">ansfljkbnsdkjfsdf  jad fkjsd fkjsd f lksdnflknsdlfkn Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat minima nam error perspiciatis, excepturi hic totam modi perferendis voluptatibus maxime fugit! Quibusdam cum magnam quod quia soluta eaque amet.</p>
+    
+
+</body>
+</html>
