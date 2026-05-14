@@ -1,87 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .navbar{
-            background-color: rgb(56, 54, 54);
-            height: max-content;
-            display: flex;
-            justify-content: space-evenly;
-            padding: 1%;
-            align-items: center;
-            color: aliceblue;
+      .navbar {
+        background-color: rgb(56, 54, 54);
+        height: max-content;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1%;
+        align-items: center;
+        color: aliceblue;
+      }
+      input {
+        width: 300px;
+      }
+      .child {
+        font-size: large;
+        font-weight: bold;
+      }
+      .footer {
+        background-color: rgb(41, 40, 40);
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        color: aliceblue;
+        align-items: center;
+        padding: 2%;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+      }
+      .child2 {
+        border-top: 1px solid white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 2%;
+        align-items: center;
+      }
+      .child1 {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        margin: 1%;
+      }
+      /* .child1:first-child{
+        border: 2px solid black;
+      } */
+      
+      .main {
+        display: flex;
+        gap: 10px;
+      
+        overflow: scroll;
+        height: 200px;
+        padding: 2%;
+      }
+      .main > div {
+        border-radius: 20px;
+        height: 190px;
+        width: 200px;
+      
+         min-width: 200px;
+       
+      }
+      .image {
+        border-radius: 30px;
+        padding: 2%;
+        margin: 2%;
+        background: url(https://images-eu.ssl-images-amazon.com/images/G/31/img24/Wireless/Mounika/MSO/May6/400x400/02._CB780665504_.jpg);
+       height: inherit;
+       width: inherit;
+       background-position: cover;
+       background-size: cover;
+       transition: all 0.5s;
+       
+       
+      }
+       .child1:nth-child(2){
+      border: 2px solid red;
+       }
+      .image:hover{
+        background-color: rgb(206, 198, 198);
+        transform: scale(1.2) 
 
-        }
-        input{
-            width: 300px;
-        }
-        .child{
-            font-size: large;
-            font-weight: bold;
+      }
+      
+      button:active{
+        background-color: black;
+        color:aliceblue
+      }
+      input[type="search"]:focus{
+        outline-color: green;
 
-        }
-        .footer{
-            background-color: rgb(41, 40, 40);
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            color: aliceblue;
-            align-items: center;
-            padding: 2%;
-        }
-        .child2{
-            border-top: 2px solid white;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        .child1{
-            display: flex;
-            justify-content: center;  
-
-        }
-
-
+      }
+      a:visited{
+        color: green;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navbar">
-        <div class="child">Amzone.in</div>
-        <div class="child">Delivery Adddress</div>
-        <div class="child"><input type="search"></div>
-        <div class="child">
-            <select>
-                <option>en</option>
-                <option>hi</option>
-            </select>
-        </div>
-        <div class="child">Hello Akshat</div>
-        <div class="child">Return & Orders</div>
-        <div class="child">Cart</div>
+      <div class="child">Amzone.in</div>
+      <div class="child">Delivery Adddress</div>
+      <div class="child"><input type="search" /></div>
+      <div class="child">
+        <select>
+          <option>en</option>
+          <option>hi</option>
+        </select>
+      </div>
+      <div class="child">Hello Akshat</div>
+      <div class="child">Return & Orders</div>
+      <div class="child">Cart</div>
+    </div>
+
+    <div class="main">
+      <div id="first">
+        <div class="image"></div>
+       
+      </div>
+      <div id="second">
+        <div class="image">
+          </div>
+       
+      </div>
+      <div id="third">
+        <div class="image"></div>
+       
+      </div>
+      <div id="fourth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="fifth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="sixth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="seventh">
+        <div class="image"></div>
+       
+      </div>
+      <div id="eirth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="ninth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="tenth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="tenth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="tenth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="tenth">
+        <div class="image"></div>
+       
+      </div>
+      <div id="tenth">
+        <div class="image"></div>
+       
+      </div>
     </div>
 
     <div class="footer">
-        <div class="child1">
-            <div>
-                <h2>Get to Know Us</h2>
-<div>About Amazon</div>
-<div>Careers</div>
-<div>Press Releases</div>
-<div>Amazon Science</div>
-            </div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+      <div class="child1">
+        <div>
+          <h2>Get to Know Us</h2>
+          <div>About Amazon</div>
+          <div>Careers</div>
+          <div>Press Releases</div>
+          <div>Amazon Science</div>
         </div>
-        <div class="child2">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+        <div>
+          <h2>Connect with Us</h2>
+          <div>Facebook</div>
+          <div>Twitter</div>
+          <div>Instagram</div>
         </div>
+        <div>
+          <h2>Make Money with Us</h2>
+          <div>Sell on Amazon</div>
+          <div>Sell under Amazon Accelerator</div>
+          <div>Protect and Build Your Brand</div>
+          <div>Amazon Global Selling</div>
+          <div>Supply to Amazon</div>
+          <div>Become an Affiliate</div>
+          <div>Fulfilment by Amazon</div>
+          <div>Advertise Your Products</div>
+          <div>Amazon Pay on Merchants</div>
+        </div>
+        <div>
+          <h2>Let Us Help You</h2>
+          <div>Your Account</div>
+          <div>Returns Centre</div>
+          <div>Recalls and Product Safety Alerts</div>
+          <div>100% Purchase Protection</div>
+          <div>Amazon App Download</div>
+          <div>Help</div>
+        </div>
+      </div>
+      <div class="child2">
+        <div><a href="https://www.amazon.in">Amazone.in</a></div>
+        <div>
+          <select>
+            <option>En</option>
+            <option>Hi</option>
+          </select>
+        </div>
+        <div><button>India</button></div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
