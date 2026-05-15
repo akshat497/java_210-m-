@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 100%;
+        border: 2px solid black;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        margin: 1%;
+      }
+      .child {
+        height: 200px;
+        width: 200px;
+      }
+
+      .parent :nth-child(2) {
+        background-color: aqua;
+      }
+      .parent :nth-child(4) {
+        background-color: blue;
+      }
+      .parent :nth-child(odd) {
+        background-color: beige;
+      }
+      .parent :nth-child(even) {
+        background-color: blueviolet;
+      }
+
+      div:not(.box) {
+        background-color: aqua;
+      }
+
+      #checkbox:checked {
+        accent-color: red;
+        transform: scale(2);
+      }
+
+      .email:disabled {
+        outline-color: red;
+        background-color: blue;
+      }
+      input:required{
+        background-color: red;
+      }
+      /* p::before{
+        content: "--->  ";
+        color: red;
+        font-size: larger;
+      }
+      p::after{
+        content: " <-----";
+      } */
+      P::first-letter{
+        font-size: xx-large;
+        color: red;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+   P::first-line{
+    color: green;
+   }
+   p::selection{
+    background: pink;
+color: black;
+   }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <form>
+        <input type="text" value="" required>
+        <input type="text" name="" id="">
+        <input type="submit" value="submit">
+    </form>
+    <input type="checkbox" id="checkbox" />
+
+    <input type="email" name="" class="email" disabled />
+    <input type="email" name="" id="" class="email" disabled />
+    <input type="button" value="Login" disabled />
+    <div class="child"></div>
+    <p>sdfsdfglorem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo consequuntur accusamus placeat ex laudantium eius optio, illo ducimus vero ratione nulla quidem, unde sunt doloremque nobis. Id suscipit quod perferendis?</p>
+    <p>dfgdfg</p>
+    <p>dfgdfgdfg</p>
+  </body>
+</html>

@@ -14,6 +14,34 @@
         align-items: center;
         color: aliceblue;
       }
+
+      @media (min-width:100px) and (max-width:400px) {
+        .navbar :nth-child(1){
+          display: none;
+         
+
+
+        }
+        .footer{
+          font-size: x-small;
+          
+          width: max-content;
+          height: 150px;
+         
+        }
+        .child1{
+          justify-content: center;
+          gap: 10px !important;
+          padding: 1%;
+         
+
+        }
+        .child2{
+
+        }
+        
+        
+      }
       input {
         width: 300px;
       }
@@ -51,11 +79,11 @@
       /* .child1:first-child{
         border: 2px solid black;
       } */
-      
+
       .main {
         display: flex;
         gap: 10px;
-      
+
         overflow: scroll;
         height: 200px;
         padding: 2%;
@@ -64,41 +92,36 @@
         border-radius: 20px;
         height: 190px;
         width: 200px;
-      
-         min-width: 200px;
-       
+
+        min-width: 200px;
       }
       .image {
         border-radius: 30px;
         padding: 2%;
         margin: 2%;
         background: url(https://images-eu.ssl-images-amazon.com/images/G/31/img24/Wireless/Mounika/MSO/May6/400x400/02._CB780665504_.jpg);
-       height: inherit;
-       width: inherit;
-       background-position: cover;
-       background-size: cover;
-       transition: all 0.5s;
-       
-       
+        height: inherit;
+        width: inherit;
+        background-position: cover;
+        background-size: cover;
+        transition: all 0.5s;
       }
-       .child1:nth-child(2){
-      border: 2px solid red;
-       }
-      .image:hover{
+      .child1:nth-child(2) {
+        border: 2px solid red;
+      }
+      .image:hover {
         background-color: rgb(206, 198, 198);
-        transform: scale(1.2) 
-
+        transform: scale(1.2);
       }
-      
-      button:active{
+
+      button:active {
         background-color: black;
-        color:aliceblue
+        color: aliceblue;
       }
-      input[type="search"]:focus{
+      input[type="search"]:focus {
         outline-color: green;
-
       }
-      a:visited{
+      a:visited {
         color: green;
       }
     </style>
@@ -122,60 +145,45 @@
     <div class="main">
       <div id="first">
         <div class="image"></div>
-       
       </div>
       <div id="second">
-        <div class="image">
-          </div>
-       
+        <div class="image"></div>
       </div>
       <div id="third">
         <div class="image"></div>
-       
       </div>
       <div id="fourth">
         <div class="image"></div>
-       
       </div>
       <div id="fifth">
         <div class="image"></div>
-       
       </div>
       <div id="sixth">
         <div class="image"></div>
-       
       </div>
       <div id="seventh">
         <div class="image"></div>
-       
       </div>
       <div id="eirth">
         <div class="image"></div>
-       
       </div>
       <div id="ninth">
         <div class="image"></div>
-       
       </div>
       <div id="tenth">
         <div class="image"></div>
-       
       </div>
       <div id="tenth">
         <div class="image"></div>
-       
       </div>
       <div id="tenth">
         <div class="image"></div>
-       
       </div>
       <div id="tenth">
         <div class="image"></div>
-       
       </div>
       <div id="tenth">
         <div class="image"></div>
-       
       </div>
     </div>
 
