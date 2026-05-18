@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            animation: slide 2s linear 2s infinite reverse;
+        } */
+      /* @keyframes slide {
+            from{
+                transform: translateX(0px);
+
+            }
+            to{
+                transform: translateX(200px);
+
+            }
+            
+        } */
+
+      /* @keyframes slide {
+            0%{
+                transform: translateX(0px);
+
+            }
+            25%{
+                transform: translateX(100px);
+            }
+            50%{
+                transform: translateX(200px) ;
+                background-color: aqua;
+            }
+            75%{
+                transform: translateX(300px) ;
+                border-radius: 50%;
+
+            }
+            100%{
+                  transform: translateX(0px);
+
+            }
+            
+        } */
+      /* .itVedant{
+            display: flex;
+         
+            justify-content: space-between;
+            padding: 1%;
+            overflow: hidden;
+        }
+        .itVedant div{
+           
+            padding: 1%;
+            animation: slide 8s linear infinite ;
+        }
+
+        @keyframes slide {
+            from    {transform: translateX(-400px);}
+            to{transform: translateX(400px);}
+            
+        } */
+      .container {
+        display: flex;
+        gap: 15px;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: gray;
+        animation: focusMove 5s steps(1) infinite;
+      }
+      .box:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .box:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .box:nth-child(3) {
+        animation-delay: 2s;
+      }
+      .box:nth-child(4) {
+        animation-delay: 3s;
+      }
+      .box:nth-child(5) {
+        animation-delay: 4s;
+      }
+
+      @keyframes focusMove {
+        0%{
+            transform: translateY(0) scale(1);
+            background-color: lime;
+        }
+        1%{
+              transform: translateY(-25px) scale(1.2);
+            background-color: lime;
+
+        }
+        20%{
+                transform: translateY(-25px) scale(1.2);
+            background-color: lime;
+
+        }
+        21%{
+              transform: translateY(0) scale(1);
+            background-color: gray;
+        }
+        100%{
+             transform: translateY(0) scale(1);
+            background-color: lime;
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box"></div> -->
+
+    <!-- <div class="itVedant">
+        <div>Java full stack</div>
+        <div>python full stack</div>
+        <div>Digital marketing</div>
+        <div>Data science</div>
+    </div> -->
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
