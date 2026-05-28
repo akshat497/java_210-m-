@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .abc {
+        color: red;
+        font-size: 24px;
+        background-color: yellow;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin: 1%;
+        color: aliceblue;
+      }
+      .parent {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="paragraph">kajsdbfkjsdbfkjsdf</p>
+    <button onclick="add()">Add</button>
+    <div class="parent">
+
+    </div>
+    <script>
+      function add(a) {
+        let b = document.createElement("div");
+        let parent=document.querySelector(".parent");
+        b.innerText = "This is a new div element: " + a;
+        b.classList.add("box");
+        parent.appendChild(b);
+      }
+
+      for (let i = 0; i < 50; i++) {
+        add(i);
+      }
+      // DOM - Document Object Model
+      // DOM is a programming interface for HTML and XML documents. It represents the page so
+      //  that programs can change the document structure, style, and content.
+      // The DOM represents the document as a tree of nodes.
+
+      // Example: Accessing and Modifying DOM Elements
+      let a = document.getElementById("paragraph");
+      a.innerText = "Hello, World!";
+      a.classList.add("abc");
+      let b = document.createElement("div");
+      b.innerText = "This is a new div element.";
+      document.body.appendChild(b);
+      //    a.innerHTML="<b>Hello, World!</b>"
+      //    a.style.color="red"
+      //    a.style.fontSize="24px"
+      //    a.style.backgroundColor="yellow"
+      console.log(a);
+    </script>
+  </body>
+</html>

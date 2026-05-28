@@ -6,8 +6,7 @@
     <title>Document</title>
     <style></style>
     <script>
-
-        //declaratives in js
+      //declaratives in js
 
       //    console.log("Hello World");
       //    console.warn("This is a warning message");
@@ -143,202 +142,241 @@
       //     console.log("a is not positive");
       // }
 
-    //   age = 14;
+      //   age = 14;
 
-    //   if (age <= 19 && age >= 13) {
-    //     console.log("teenager");
-    //   } else if (age <= 60 && age >= 20) {
-    //     console.log("adult");
-    //   } else if (age > 60) {
-    //     console.log("senior citizen");
-    //   } else {
-    //     console.log("child");
-    //   }
+      //   if (age <= 19 && age >= 13) {
+      //     console.log("teenager");
+      //   } else if (age <= 60 && age >= 20) {
+      //     console.log("adult");
+      //   } else if (age > 60) {
+      //     console.log("senior citizen");
+      //   } else {
+      //     console.log("child");
+      //   }
 
-    // day=1
+      // day=1
 
-    // switch(day){
-    //     case 1:
-    //         console.log("Monday");
-    //         break;
-    //     case 2:
-    //         console.log("Tuesday");
-    //         break;
-    //     case 3:
-    //         console.log("Wednesday");
-    //         break;
-    //     case 4:
-    //         console.log("Thursday");
-    //         break;
-    //     case 5:
-    //         console.log("Friday");
-    //         break;
-    //     case 6:
-    //         console.log("Saturday");
-    //         break;
-    //     case 7:
-    //         console.log("Sunday");
-    //         break;
-    //     default:
-    //         console.log("Invalid day");
-    // }
+      // switch(day){
+      //     case 1:
+      //         console.log("Monday");
+      //         break;
+      //     case 2:
+      //         console.log("Tuesday");
+      //         break;
+      //     case 3:
+      //         console.log("Wednesday");
+      //         break;
+      //     case 4:
+      //         console.log("Thursday");
+      //         break;
+      //     case 5:
+      //         console.log("Friday");
+      //         break;
+      //     case 6:
+      //         console.log("Saturday");
+      //         break;
+      //     case 7:
+      //         console.log("Sunday");
+      //         break;
+      //     default:
+      //         console.log("Invalid day");
+      // }
 
-    //loops in JavaScript
-    //1. for loop
-    //2. while loop
-    //3. do...while loop
+      //loops in JavaScript
+      //1. for loop
+      //2. while loop
+      //3. do...while loop
 
+      //for loop says give me starting point, ending point and increment or decrement
 
-    //for loop says give me starting point, ending point and increment or decrement
-
-    for(let i=0;i<5;i++){
+      for (let i = 0; i < 5; i++) {
         // debugger
         console.log(i);
+      }
 
-    }
+      //while loop says give me a condition and it will run until the condition is true
 
-    //while loop says give me a condition and it will run until the condition is true
+      // while(true){
+      //     let number=prompt("Enter a number");
+      //     if(number==11){
+      //         break;
+      //     }
 
-    // while(true){
-    //     let number=prompt("Enter a number");
-    //     if(number==11){
-    //         break;
-    //     }
+      // }
+      let array = [
+        1,
+        2,
+        3,
+        4,
+        5,
+        "akshat",
+        true,
+        null,
+        undefined,
+        [1, 2, 3],
+        { name: "John", age: 30 },
+        function () {
+          console.log("Hello World");
+        },
+      ];
+
+      for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+
+      //print 1 to 50 numbers with for loop
+      //print a array with for loop
+
+      //do while loop says ki mai ek bar toh run krunga he krung beshak pehli statement false ho
+
+      // do{
+
+      //   console.log("akshat")
+
+      // }while(false)
+
+      //find prime numbers from user input
+      //prime number is a number which is divisible by 1 and itself only
+
+      let input = 330;
+
+      // for(let i=1;i<=10;i++){
+      //   debugger
+      //   let count=0;
+      //    for(let j=1;j<=i;j++){
+      //     debugger
+      //     if(i%j==0){
+      //         count++;
+      //     }
+      // }
+      // if(count==2){
+      //     console.log(i+" is a prime number");
+      // }
+      // }
+
+      // if(input%2==0){
+      //     console.log(input+" is  a even number");
+      // }else{
+      //     console.log(input+" is an odd number");
+      // }
+
+      // //find number is odd or even
+      // for(let i=1;i<=10;i++){
+      //     if(i%2==0){
+      //         console.log(i+" is an even number");
+      //     }else{
+      //         console.log(i+" is an odd number");
+      //     }
+      // }
+      //.       012345
+      // let name="akshat"
+      // let reveserd=""
+
+      // let array1=[111,33,22,44,66]
+
+      // for (let i=array1.length-1;i>=0;i--){
+      //     console.log(array1[i]);
+      // }
+
+      // for(let i=name.length-1;i>=0;i--){
+      //    //              "" +.   t
+
+      //     reveserd = reveserd + name[i];
+      // }
+      // console.log(reveserd);
+      //find all prime numbers between 1 to 10
+
+      // for(let i=1;i<=10;i++){
+      //     let count=0;
+      //     for(let j=1;j<=i;j++){
+      //         if(i%j==0){
+      //             count++;
+      //         }
+      //     }
+      //     if(count==2){
+      //         console.log(i+" is a prime number");
+      //     }
+      // }
+
+      let array1 = [1, 2, 3, 4, 5, 3];
+      //array functions in JavaScript
+      array1.push(6); //it adds an element at the end of the array
+      console.log(array1);
+      array1.pop(); //it removes an element from the end of the array
+      console.log(array1);
+      array1.shift(); //it removes an element from the beginning of the array
+      console.log(array1);
+      array1.unshift(0); //it adds an element at the beginning of the array
+      console.log(array1);
+      console.log(array1.indexOf(3)); //it returns the index of the first occurrence of an element in the array
+      console.log(array1.lastIndexOf(3)); //it returns the index of the last occurrence of an element in the array
+      console.log(array1.includes(33)); //it returns true if an element is present in the array and false otherwise
+      console.log(array1.length); //it returns the number of elements in the array
+      console.log(array1.slice(1, 4)); //it returns a new array containing a portion of the original array
+      console.log(array1.splice(0, 3, 10)); //it changes the contents of an array by removing or replacing existing elements
+      console.log(array1);
+      // push()//it adds an element at the end of the array
+      // pop()//it removes an element from the end of the array
+      // shift()//it removes an element from the beginning of the array
+      // unshift()//it adds an element at the beginning of the array
+      // indexOf()//it returns the index of the first occurrence of an element in the array
+      // lastIndexOf()//it returns the index of the last occurrence of an element in the array
+      // includes()//it returns true if an element is present in the array and false otherwise
+      // length()//it returns the number of elements in the array
+      // slice()//it returns a new array containing a portion of the original array
+      // splice()//it changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+      // concat()//it is used to merge two or more arrays and it returns a new array
+      // join()//it is used to join all the elements of an array into a string and it returns a string
+
+      // what is a function?
+      // function is a block of code which can be reused and it can take input and return output
+      function add() {}
+      //types of functions in JavaScript
+      //1. function declaration
+      //2. function expression
+      //3. arrow function
+      //4. self calling function
+      //5. callback function
+      //6. recursive function
+      //7. higher order function
+      //8. return function
+
+      // let i=0;
+      // do{
+
+      //   if(i===2){
+      //     continue;
+      //   }
+      //   console.log(i);
+      //   i++;
+
+      // }while(i<5)//continue statement is used to skip the current iteration of the loop and move to the next iteration1qaSx
+      let number = 6; //1*2*3*4*5*6.
+      let a = 1;
+      for (let i = 1; i <= number; i++) {
+        a = a * i;
+         console.log(a);
+      }
+      let array2 = [70,90,123,987];
+      let max=array2[0]
+
+      for(let i=0;i<array2.length;i++){
         
-    // }
-     let array=[1,2,3,4,5,"akshat", true, null, undefined, [1,2,3], {name: "John", age: 30}, function() { console.log("Hello World"); }]
+         if(array2[i]>max){
+          
+            max=array2[i]
+         }
+      }
+      console.log("max",max);
+      let sum = 0;
 
-   for(let i=0;i<array.length;i++){
-    console.log(array[i]);
-   }
+      for (let i=0; i<array2.length; i++){
+          //.  0.       1
+        sum = sum + array2[i];
+      }
+      console.log(sum);
 
-
-
-    
-
-    //print 1 to 50 numbers with for loop 
-    //print a array with for loop
-
-
-//do while loop says ki mai ek bar toh run krunga he krung beshak pehli statement false ho
-
-
-
-// do{
-
-//   console.log("akshat")
-
-// }while(false)
-
-//find prime numbers from user input
-//prime number is a number which is divisible by 1 and itself only
-
-let input=330;
-
-// for(let i=1;i<=10;i++){
-//   debugger
-//   let count=0;
-//    for(let j=1;j<=i;j++){
-//     debugger
-//     if(i%j==0){
-//         count++;
-//     }
-// }
-// if(count==2){
-//     console.log(i+" is a prime number");
-// }
-// }
-
-// if(input%2==0){
-//     console.log(input+" is  a even number");
-// }else{
-//     console.log(input+" is an odd number");
-// }
-
-// //find number is odd or even
-// for(let i=1;i<=10;i++){
-//     if(i%2==0){
-//         console.log(i+" is an even number");
-//     }else{
-//         console.log(i+" is an odd number");
-//     }
-// }
-//.       012345
-// let name="akshat"
-// let reveserd=""
-
-// let array1=[111,33,22,44,66]
-
-// for (let i=array1.length-1;i>=0;i--){
-//     console.log(array1[i]);
-// }
-
-// for(let i=name.length-1;i>=0;i--){
-//    //              "" +.   t
-   
-//     reveserd = reveserd + name[i];
-// }
-// console.log(reveserd);
-//find all prime numbers between 1 to 10
-
-// for(let i=1;i<=10;i++){
-//     let count=0;
-//     for(let j=1;j<=i;j++){
-//         if(i%j==0){
-//             count++;
-//         }
-//     }
-//     if(count==2){
-//         console.log(i+" is a prime number");
-//     }
-// }
-
-
-let array1=[1,2,3,4,5,3]
-//array functions in JavaScript
-array1.push(6)//it adds an element at the end of the array
-console.log(array1);
-array1.pop()//it removes an element from the end of the array
-console.log(array1);
-array1.shift()//it removes an element from the beginning of the array
-console.log(array1);
-array1.unshift(0)//it adds an element at the beginning of the array
-console.log(array1);
-console.log(array1.indexOf(3))//it returns the index of the first occurrence of an element in the array
-console.log(array1.lastIndexOf(3))//it returns the index of the last occurrence of an element in the array
-console.log(array1.includes(33))//it returns true if an element is present in the array and false otherwise
-console.log(array1.length)//it returns the number of elements in the array
-console.log(array1.slice(1,4))//it returns a new array containing a portion of the original array
-console.log(array1.splice(0,3,10))//it changes the contents of an array by removing or replacing existing elements
-console.log(array1);
-push()//it adds an element at the end of the array
-pop()//it removes an element from the end of the array
-shift()//it removes an element from the beginning of the array
-unshift()//it adds an element at the beginning of the array
-indexOf()//it returns the index of the first occurrence of an element in the array
-lastIndexOf()//it returns the index of the last occurrence of an element in the array
-includes()//it returns true if an element is present in the array and false otherwise
-length()//it returns the number of elements in the array
-slice()//it returns a new array containing a portion of the original array
-splice()//it changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
-concat()//it is used to merge two or more arrays and it returns a new array
-join()//it is used to join all the elements of an array into a string and it returns a string
-
-
-// what is a function?
-// function is a block of code which can be reused and it can take input and return output
-function add(){
-  
-}
-//types of functions in JavaScript
-//1. function declaration
-//2. function expression
-//3. arrow function
-//4. self calling function
-//5. callback function
-//6. recursive function
-//7. higher order function
-//8. return function
+     
     </script>
   </head>
   <body></body>
