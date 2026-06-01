@@ -51,6 +51,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Age</th>
+            <th>Actions</th>
         </tr>
         <tbody id="table-body">
             
@@ -58,12 +59,19 @@
    
     <script>
            let tableBody = document.getElementById("table-body");
+           let array=[]
        function addToTable(){
          let nameInput = document.getElementById("name");
         let emailInput = document.getElementById("email");
         let phoneInput = document.getElementById("phone");
         let ageInput = document.getElementById("age");
-     
+       let student={
+    name:nameInput.value,
+email:emailInput.value,
+phone:phoneInput.value,
+age:ageInput.value
+       }
+        array.push(student);
         let newRow = document.createElement("tr");
         
         newRow.innerHTML = `
