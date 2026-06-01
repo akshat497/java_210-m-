@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 400px;
+            width: 200px;
+            margin: 0 auto;
+            padding: 2%;
+            border: 1px solid black;
+        }
+        label{
+            display: flex;
+          
+            margin-bottom: 10px;
+            justify-content: space-between;
+        }
+        input[type="submit"]{
+            width: inherit;
+            padding: 5px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+         input[type="submit"]:hover{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+  
+     <form>
+        <label ><div>Name:</div><input type="text" id="name" name="name" required></label>
+        <label ><div>Email:</div><input type="email" id="email" name="email" required></label>
+        <label ><div>Phone:</div><input type="tel" id="phone" name="phone" required></label>
+        <label ><div>Age:</div><input type="number" id="age" name="age" required></label>
+        <input type="submit" value="Submit" onclick="addToTable()">
+        
+    </form>
+
+    <table border="1" style="width: 50%; margin: 20px auto; text-align: center;">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Age</th>
+        </tr>
+        <tbody id="table-body">
+            
+        </tbody>
+   
+    <script>
+           let tableBody = document.getElementById("table-body");
+       function addToTable(){
+         let nameInput = document.getElementById("name");
+        let emailInput = document.getElementById("email");
+        let phoneInput = document.getElementById("phone");
+        let ageInput = document.getElementById("age");
+     
+        let newRow = document.createElement("tr");
+        
+        newRow.innerHTML = `
+            <td>${nameInput.value}</td>
+            <td>${emailInput.value}</td>
+            <td>${phoneInput.value}</td>
+            <td>${ageInput.value}</td>
+        `;
+        tableBody.appendChild(newRow);
+       }
+        
+
+
+       
+
+    </script>
+    
+</body>
+</html>

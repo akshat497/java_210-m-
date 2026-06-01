@@ -26,14 +26,14 @@
   <body>
     <p id="paragraph">kajsdbfkjsdbfkjsdf</p>
     <button onclick="add()">Add</button>
-    <div class="parent">
-
-    </div>
+    <div class="parent"></div>
     <script>
+
+        //dom manipulation
       function add(a) {
         let b = document.createElement("div");
-        let parent=document.querySelector(".parent");
-        b.innerText = "This is a new div element: " + a;
+        let parent = document.querySelector(".parent");
+        b.innerHTML= "<b>This is a new div element: </b>" + a;
         b.classList.add("box");
         parent.appendChild(b);
       }
@@ -47,17 +47,94 @@
       // The DOM represents the document as a tree of nodes.
 
       // Example: Accessing and Modifying DOM Elements
-      let a = document.getElementById("paragraph");
-      a.innerText = "Hello, World!";
-      a.classList.add("abc");
-      let b = document.createElement("div");
-      b.innerText = "This is a new div element.";
-      document.body.appendChild(b);
+      //   let a = document.getElementById("paragraph");
+      //   a.innerText = "Hello, World!";
+      //   a.classList.add("abc");
+      //   let b = document.createElement("div");
+      //   b.innerText = "This is a new div element.";
+      //   document.body.appendChild(b);
       //    a.innerHTML="<b>Hello, World!</b>"
       //    a.style.color="red"
       //    a.style.fontSize="24px"
       //    a.style.backgroundColor="yellow"
-      console.log(a);
+      //   console.log(a);
+
+      let array = [1, 2, 3, 4, 5];
+
+      let [a, b, ...rest] = array; //destructuring assignment
+
+      console.log(a); // Output: 1
+      console.log(b); // Output: 2
+      console.log(rest); // Output: [3, 4, 5]
+
+      function abcd(...args) {
+        console.log(args);
+      }
+
+      abcd(1, 2, 3, 4, 5); //rest operator
+      let z = [1, 2, 3];
+      let y = [4, 5, 6];
+      let m = [...z, ...y]; //spread operator
+      console.log(m); // Output: [1, 2, 3, 4, 5, 6]
+      //rest operator
+      //rest operator in js is used to represent an indefinite number of
+      // arguments as an array. It is denoted by three dots (...).
+
+      //   function sum(...numbers) {
+      //     return numbers.reduce((acc, curr) => acc + curr, 0);
+      //   }
+      //   console.log(sum(1, 2, 3, 4)); // Output: 10
+
+      //rest operator ...
+      //spred operator. ...
+
+      //rest operator collects multiple value in single array
+
+      //spread operator is used to spread the elements of an array or object into individual elements.
+
+      //revese a string
+      // 0.  1  2. 3
+      [44, 55, 66, 77];
+      //0 1 2 3.4. 5
+      //a k s h a t
+      let name = "naman";
+      //   length -1
+      let reversed = "";
+
+      for (let i = name.length - 1; i >= 0; i--) {
+        //   tahska     "tahsk"     +"a"
+        reversed = reversed + name[i];
+      }
+
+      console.log(reversed); // Output: "tahska"
+      if (name == reversed) {
+        console.log("palindrome");
+      } else {
+        console.log("not a palindrome");
+      }
+
+      //prime number
+
+      let userInput = 339;
+      let count = 0;
+      for (let i = 2; i < userInput; i++) {
+        // debugger;
+        if (count == 1) {
+          break;
+        }
+        if (userInput % i == 0) {
+          count++;
+        }
+      }
+
+      if (count == 0) {
+        console.log("prime number");
+      } else {
+        console.log("not a prime number");
+      }
+
+      //what are prime numbers
+      // jo khudki table ya phie one ki table aye
     </script>
   </body>
 </html>
