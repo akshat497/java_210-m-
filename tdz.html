@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(x);
+      //    console.log(y);
+      var x = 10;
+      let y = 20;
+
+      // hoesting in javascript is a behavior in which variable and function
+      // declarations are moved to the top of their containing scope during
+      // the compilation phase. This means that you can use variables and functions
+      //  before they are declared in the code. However, only the declarations are hoisted,
+      // not the initializations. So, if you try to access a variable before it has been assigned a value,
+      // it will return undefined.
+
+      //temporal dead zone (TDZ) is a behavior in JavaScript that occurs when you try to access a variable declared
+      // with let or const before it has been initialized.
+      // In this case, the variable is in a "temporal dead zone" and will throw a ReferenceError if you try to access
+      //  it. This is because let and const declarations are not
+      // hoisted in the same way as var declarations, and they are not accessible until they have been initialized.
+      // The TDZ helps to prevent bugs and improve code readability by ensuring that variables are not used before they are properly initialized.
+
+      // higher order functions are those functions
+      // that can take other functions as arguments or return functions as their result.
+      // They are a fundamental concept in functional programming and are widely used in JavaScript.
+      // Examples of higher order functions in JavaScript include:
+
+      function greet(a, b) {
+        return a + b;
+      }
+
+      function higherOrderFunction(a, b, c) {
+        console.log("Inside higher order function");
+        console.log(a, b, c);
+        return c(5, 10);
+      }
+
+      console.log(higherOrderFunction(1, 2, greet));
+
+      //array methods like map, filter, and reduce are examples of higher order functions in JavaScript.
+      // They take a function as an argument and apply it to each element of the array, allowing you to perform operations on the array in a more concise and functional way.
+      let array = [1, 2, 3, 4, 5];
+      //map method creates a new array by applying a provided function to each element of the original array.
+      let copy = array.map(function (item) {
+        return item * 2;
+      });
+      console.log("copy array", copy);
+      console.log("original array", array);
+      //filter method creates a new array with all elements that pass the test implemented by the provided function.
+      let filteredArray = array.filter(function (item) {
+        return item % 2 === 0; // Keep only even numbers
+      });
+      let findArray = array.find(function (item) {
+        return item % 2 === 0; // Find the first element that is even
+      });
+      let forArray = array.forEach(function (item) {
+        console.log(item);
+        return item * 2;
+      });
+      let reducedArray = array.reduce(function (acc, item) {
+        return acc + item;
+      }, 0);
+      console.log("reduced array", reducedArray);
+      console.log("filtered array", filteredArray);
+      console.log("find array", findArray);
+      console.log("original array", array);
+      console.log("for array", forArray);
+
+      //searchbar with filter 
+const users = [
+  {
+    id: 1,
+    name: "Akshat Saini",
+    age: 24,
+    email: "akshat@gmail.com",
+    city: "Rohtak"
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    age: 22,
+    email: "priya@gmail.com",
+    city: "Delhi"
+  },
+  {
+    id: 3,
+    name: "Rahul Verma",
+    age: 27,
+    email: "rahul@gmail.com",
+    city: "Mumbai"
+  },
+  {
+    id: 4,
+    name: "Neha Singh",
+    age: 25,
+    email: "neha@gmail.com",
+    city: "Pune"
+  },
+  {
+    id: 5,
+    name: "Aman Gupta",
+    age: 29,
+    email: "aman@gmail.com",
+    city: "Jaipur"
+  },
+  {
+    id: 6,
+    name: "Simran Kaur",
+    age: 23,
+    email: "simran@gmail.com",
+    city: "Chandigarh"
+  },
+  {
+    id: 7,
+    name: "Rohit Yadav",
+    age: 26,
+    email: "rohit@gmail.com",
+    city: "Lucknow"
+  },
+  {
+    id: 8,
+    name: "Karan Malhotra",
+    age: 30,
+    email: "karan@gmail.com",
+    city: "Bangalore"
+  },
+  {
+    id: 9,
+    name: "Anjali Mehta",
+    age: 21,
+    email: "anjali@gmail.com",
+    city: "Ahmedabad"
+  },
+  {
+    id: 10,
+    name: "Vikas Kumar",
+    age: 28,
+    email: "vikas@gmail.com",
+    city: "Hyderabad"
+  }
+];
+
+console.log(users);
+      let searchedValue="ar";
+
+
+      let filteredUser=users.filter(function(user){
+        return user.name.toLowerCase().includes(searchedValue.toLowerCase());
+      })
+      console.log("filtered user", filteredUser);
+    </script>
+  </body>
+</html>
