@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightgray;
+            margin: 1%;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            width: 50vw;
+            height: 100vh;
+            background-color: lightblue;
+            margin: 1%;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #Editing{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          
+        }
+        label{
+            display: flex;
+            justify-content: space-between;
+        }
+        label div{
+            font-weight: bold;
+            width: 100px;
+        }
+        label input{
+            width: 200px;
+            padding: 5px;
+        }
+        .announcementBar{
+            width: 100%;
+            height: max-content;
+            background-color: white;
+            display: flex;
+            color: black;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="box" id="Editing">
+             <center><h1>Editing</h1></center>
+            <label>
+                <div>Title</div>:<input type="text" onkeyup="editing()" placeholder="Enter title here" id="title"/>
+            
+            </label>
+                <label>
+                    <div>Description</div>:<input type="text" onkeyup="editing()" placeholder="Enter description here" id="description"/>
+                </label>
+                 <label>
+                    <div>Color</div>:<input type="color" onchange="editing()" placeholder="Enter description here" id="color"/>
+                </label>
+                <label>
+                    <div>Style</div>:<div style="width: 200px;"><select id="style" onchange="editing()">
+                        <option value="bold">Bold</option>
+                        <option value="italic">Italic</option>
+                        <option value="underline">Underline</option>
+                    </select></div>
+
+                    <label>
+                        Alingnment<div style="width: 200px;"><select id="alignment" onchange="editing()">
+                            <option value="left">Left</option>
+                            <option value="center">Center</option>
+                            <option value="right">Right</option>
+                            </select>
+                            </div>
+                    </label>
+                
+        </div>
+        <div class="box">
+            <div id="announcementBar"></div>
+        </div>
+    </div>
+     
+ 
+
+    <script>
+        let announcementBar=document.getElementById("announcementBar");
+
+         announcementBar.classList.add("announcementBar");
+        function editing(){
+            let title=document.getElementById("title");
+            let description=document.getElementById("description");
+            let select=document.getElementById("style");
+             let style=select.value;
+             let alignment=document.getElementById("alignment").value;
+            //  announcementBar.style.textAlign=alignment;
+           announcementBar.style.justifyContent=alignment==="left" ? "flex-start" : alignment==="center" ? "center" : "flex-end";
+           
+            let color=document.getElementById("color");
+            let descriptionvalue=description.value;
+            let value=title.value;
+            // announcementBar.innerText=value;
+            announcementBar.innerHTML=`   <div style="display: flex; flex-direction: column;  height: max-content; justify-content: ${alignment}; align-items: ${alignment};">
+        <h1 style="  margin: 0;color: ${color.value}; font-weight: ${style === 'bold' ? 'bold' : 'normal'}; font-style: ${style === 'italic' ? 'italic' : 'normal'}; text-decoration: ${style === 'underline' ? 'underline' : 'none'};">${value}</h1>
+        <p style="  margin: 0;color: ${color.value};" font-weight: ${style === 'bold' ? 'bold' : 'normal'}; font-style: ${style === 'italic' ? 'italic' : 'normal'}; text-decoration: ${style === 'underline' ? 'underline' : 'none'}>${descriptionvalue}</p>
+    </div>`;
+
+
+
+            
+        }
+
+    </script>
+    
+</body>
+</html>

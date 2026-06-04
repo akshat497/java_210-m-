@@ -72,88 +72,115 @@
       console.log("original array", array);
       console.log("for array", forArray);
 
-      //searchbar with filter 
-const users = [
-  {
-    id: 1,
-    name: "Akshat Saini",
-    age: 24,
-    email: "akshat@gmail.com",
-    city: "Rohtak"
-  },
-  {
-    id: 2,
-    name: "Priya Sharma",
-    age: 22,
-    email: "priya@gmail.com",
-    city: "Delhi"
-  },
-  {
-    id: 3,
-    name: "Rahul Verma",
-    age: 27,
-    email: "rahul@gmail.com",
-    city: "Mumbai"
-  },
-  {
-    id: 4,
-    name: "Neha Singh",
-    age: 25,
-    email: "neha@gmail.com",
-    city: "Pune"
-  },
-  {
-    id: 5,
-    name: "Aman Gupta",
-    age: 29,
-    email: "aman@gmail.com",
-    city: "Jaipur"
-  },
-  {
-    id: 6,
-    name: "Simran Kaur",
-    age: 23,
-    email: "simran@gmail.com",
-    city: "Chandigarh"
-  },
-  {
-    id: 7,
-    name: "Rohit Yadav",
-    age: 26,
-    email: "rohit@gmail.com",
-    city: "Lucknow"
-  },
-  {
-    id: 8,
-    name: "Karan Malhotra",
-    age: 30,
-    email: "karan@gmail.com",
-    city: "Bangalore"
-  },
-  {
-    id: 9,
-    name: "Anjali Mehta",
-    age: 21,
-    email: "anjali@gmail.com",
-    city: "Ahmedabad"
-  },
-  {
-    id: 10,
-    name: "Vikas Kumar",
-    age: 28,
-    email: "vikas@gmail.com",
-    city: "Hyderabad"
-  }
-];
+      //searchbar with filter
+      const users = [
+        {
+          id: 1,
+          name: "Akshat Saini",
+          age: 24,
+          email: "akshat@gmail.com",
+          city: "Rohtak",
+        },
+        {
+          id: 2,
+          name: "Priya Sharma",
+          age: 22,
+          email: "priya@gmail.com",
+          city: "Delhi",
+        },
+        {
+          id: 3,
+          name: "Rahul Verma",
+          age: 27,
+          email: "rahul@gmail.com",
+          city: "Mumbai",
+        },
+        {
+          id: 4,
+          name: "Neha Singh",
+          age: 25,
+          email: "neha@gmail.com",
+          city: "Pune",
+        },
+        {
+          id: 5,
+          name: "Aman Gupta",
+          age: 29,
+          email: "aman@gmail.com",
+          city: "Jaipur",
+        },
+        {
+          id: 6,
+          name: "Simran Kaur",
+          age: 23,
+          email: "simran@gmail.com",
+          city: "Chandigarh",
+        },
+        {
+          id: 7,
+          name: "Rohit Yadav",
+          age: 26,
+          email: "rohit@gmail.com",
+          city: "Lucknow",
+        },
+        {
+          id: 8,
+          name: "Karan Malhotra",
+          age: 30,
+          email: "karan@gmail.com",
+          city: "Bangalore",
+        },
+        {
+          id: 9,
+          name: "Anjali Mehta",
+          age: 21,
+          email: "anjali@gmail.com",
+          city: "Ahmedabad",
+        },
+        {
+          id: 10,
+          name: "Vikas Kumar",
+          age: 28,
+          email: "vikas@gmail.com",
+          city: "Hyderabad",
+        },
+      ];
 
-console.log(users);
-      let searchedValue="ar";
+      console.log(users);
+      let searchedValue = "ar";
 
-
-      let filteredUser=users.filter(function(user){
+      let filteredUser = users.filter(function (user) {
         return user.name.toLowerCase().includes(searchedValue.toLowerCase());
-      })
+      });
       console.log("filtered user", filteredUser);
+
+      //closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables and parameters, even after the outer function has returned. This allows the inner function to "remember" the environment in which it was created, enabling it to access and manipulate variables from that environment.
+      // Closures are often used to create private variables and functions, as well as to implement data encapsulation and maintain state in JavaScript.
+
+      function outer() {
+        debugger
+        let outerVar = "I am Outer Variable";
+
+        function middle() {
+          debugger
+          let middleVar = "I am Middle Variable";
+
+          function inner() {
+            debugger
+            let innerVar = "I am Inner Variable";
+
+            console.log(outerVar);
+            console.log(middleVar);
+            console.log(innerVar);
+          }
+
+          inner();
+        }
+
+        middle();
+      }
+
+      outer();
     </script>
   </body>
 </html>

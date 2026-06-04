@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            margin: 1%;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <div id="raghav"></div>
+    <button onclick="bold()">B</button>
+    <button onclick="italic()">I</button>
+
+    <script>
+      let p = document.querySelectorAll("p");
+      let div=document.getElementById("raghav");
+    
+      div.innerText="This is a div element with id 'raghav'";
+      div.classList.add("box");
+      console.log(div);
+
+      for(let i=0;i<20;i++){
+       let newDiv=document.createElement("div");
+       newDiv.innerText="This is div number " + (i+1);
+         newDiv.classList.add("box");
+         console.log(newDiv);
+         document.body.append(newDiv);
+      }
+
+      function bold(){
+        let box=document.querySelectorAll(".box");
+
+        box.forEach(function(item){
+            if(item.style.fontWeight==="bold"){
+                item.style.fontWeight="normal";
+            }else{
+                item.style.fontWeight="bold";
+            }
+        });
+
+      }
+      function italic(){
+        let box=document.querySelectorAll(".box");
+        box.forEach(function(item){
+            if(item.style.fontStyle==="italic"){
+                item.style.fontStyle="normal";
+            }else{
+                item.style.fontStyle="italic";
+            }
+        });
+      }
+    //   div.style.color="blue";
+    //     div.style.fontSize="24px";
+    //     div.style.height="100px";
+    //     div.style.width="200px";
+    //     div.style.backgroundColor="lightgray";
+      p.forEach(function (item, index) {
+        item.innerText = "Hello, World!" + index;
+      });
+      console.log(p);
+    </script>
+  </body>
+</html>
