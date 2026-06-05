@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("start");
+
+      //cs-->webapis-->callback queue.  priprity lower than microtask queue so it will be moved to call stack after the microtask queues gets resolved
+      setTimeout(() => {
+        console.log("second");
+      }, 0);
+     //cs-->webapis --> microtask queue.     priority high   first this will be moved to call stack 
+      Promise.resolve().then(() => {
+        setTimeout(() => {
+        console.log("inside promis");
+      }, 10000);
+      });
+
+      console.log("third");
+    </script>
+  </body>
+</html>
