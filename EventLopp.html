@@ -34,43 +34,43 @@
 
       //promise handling
 
-      akshat
-        .then(function (message) {
-          return message * 2;
-        })
-        .then(function (message) {
-          return message + 25;
-        })
-        .then(function (message) {
-          console.log(message);
-        })
-        .catch(function (message) {
-          console.log(message);
-        })
-        .finally(function () {
-          console.log("finished");
-        });
+      // akshat
+      //   .then(function (message) {
+      //     return message * 2;
+      //   })
+      //   .then(function (message) {
+      //     return message + 25;
+      //   })
+      //   .then(function (message) {
+      //     console.log(message);
+      //   })
+      //   .catch(function (message) {
+      //     console.log(message);
+      //   })
+      //   .finally(function () {
+      //     console.log("finished");
+      //   });
       //promis chaining
-      Promise.resolve(10)
-        .then((num) => {
-          return num * 2;
-        })
-        .then((num) => {
-          return num + 5;
-        })
-        .then((result) => {
-          console.log(result);
-        });
+      // Promise.resolve(10)
+      //   .then((num) => {
+      //     return num * 2;
+      //   })
+      //   .then((num) => {
+      //     return num + 5;
+      //   })
+      //   .then((result) => {
+      //     console.log(result);
+      //   });
 
-      Promise.resolve().then(() => {
-        throw new Error("Something wrong");
-      });
+      // Promise.resolve().then(() => {
+      //   throw new Error("Something wrong");
+      // });
 
-      const p2 = Promise.resolve(2);
-      const p3 = Promise.resolve(3);
-      Promise.all([p2, p3]).then((data) => {
-        console.log(data);
-      });
+      // const p2 = Promise.resolve(2);
+      // const p3 = Promise.resolve(3);
+      // Promise.all([p2, p3]).then((data) => {
+      //   console.log(data);
+      // });
 
       //https://jsonplaceholder.typicode.com/users
 
@@ -85,12 +85,15 @@
 
 
       //async await
-      let users;
+   
       async function getData(){
         let response=await fetch("https://jsonplaceholder.typicode.com/users");
         let data=await response.json()
-        users=data
+        return data
       }
+
+      console.log(getData())
+
 
       
 
