@@ -44,8 +44,12 @@
             .toLowerCase()
             .includes(userInput.value.toLowerCase());
         });
-
-        displayUsers(filteredValues, true);
+          if (userInput.value.trim() === "") {
+      displayUsers([],false);
+      return;
+    }
+          displayUsers(filteredValues, true);
+        
       }
       function displayHeader() {
         let tHead = document.getElementById("thead");
@@ -56,17 +60,24 @@
           th.innerText = key;
           tr.append(th);
         });
-         tHead.append(tr); 
+        tHead.append(tr);
       }
-      function displayUsers(array = users, search = false) {
+      function displayUsers(filteredValue, searched) {
         let tBody = document.getElementById("tbody");
 
         // clear old rows
         tBody.innerHTML = "";
 
-       
-        array.forEach((key) => {
+        users.forEach((key) => {
           let tr = document.createElement("tr");
+
+          let isMatched = filteredValue?.some((value) => value.id === key.id);
+
+          if (isMatched) {
+            tr.style.backgroundColor = "green";
+            tr.style.color = "white";
+            tr.style.fontSize = "larger";
+          }
 
           let values = [
             key.id,
