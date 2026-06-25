@@ -1,15 +1,16 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { Header } from "./Header/Header.jsx";
+import Footer from "./Footer.jsx";
 
-createRoot(document.getElementById('root')).render(
 
-    <>
-      <App />
-      <App/>
-         <App/>
-            <App/>
-               <App/>
-    </>
+createRoot(document.getElementById("root")).render(
+  <>
+    {/* {props} in react  */}
 
-)
+    <App  age={25} />
+
+    <Footer />
+  </>,
+);
