@@ -12,20 +12,72 @@
         height: 100px;
         width: 100px;
         margin: 2%;
-        display: inline-block;
+       
       }
-      #box{
-        background-color: aqua;
-
-      }
-      #box2{
-        background-color: aqua;
-        border-radius: 50%;
+      #box1{
+        background-color: blue;
+        position: relative;
+        top: 50px;
+        z-index: -1;
         
       }
+      #box2{
+        background-color:aqua;
+        position:fixed;
+        bottom:0;
+        right:0;
+      }
+      #box3{
+        background-color:green;
+        position:absolute;
+        top:0;
+        right:0;
+        height:20px;
+        width:20px;
+        border:2px solid red;
+        border-radius:50%;
+      }
+      #parent{
+    
+        height:200px;
+        width:200px;
+        background-color:yellow;
+      }
+
+      #grandparent{
+        position:relative;
+        height:400px;
+        width:400px;
+        background-color:pink;
+      }
+      #box4{
+        position:sticky;
+        bottom:0;
+        background-color:orange;
+      }
+      
+
+      /* by default every element is positioned as static but we can change it by using position property */
+      /* relative
+      static
+      absolute
+      fixed
+      sticky */
     </style>
   </head>
   <body>
+     <div class="box" id="box1">i ama div</div>
+    <div class="box" id="box2">i ama div</div>
+    <div id="grandparent">
+      <div id="parent">
+      
+      <div class="box" id="box3"></div>
+    
+    </div>
+    </div>
+   
+    <div class="box" id="box5">i ama div</div>
+     <div class="box" id="box4">i ama div</div>
     <h1>Hello</h1>
     <h2>hello</h2>
     <h3>hello</h3>
@@ -179,10 +231,6 @@
       xyz
     </div>
 
-    <div class="box" id="box1">i ama div</div>
-    <div class="box" id="box2">i ama div</div>
-    <div class="box" id="box3">i ama div</div>
-    <div class="box" id="box4">i ama div</div>
-    <div class="box" id="box5">i ama div</div>
+   
   </body>
 </html>
