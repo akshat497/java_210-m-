@@ -5,3 +5,7 @@
     padding: 1rem;
     background-color: #7f7878;
 }
+.header-nav{
+    display: flex;
+    gap: 1rem;
+}

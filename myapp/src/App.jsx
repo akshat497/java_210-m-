@@ -34,14 +34,24 @@ import React from 'react'
 import Header from './Header/Header'
 import Footer from './footer/Footer'
 import Login from './Login/Login'
-
+import { BrowserRouter ,Routes,Route} from 'react-router-dom'
+import Contact from './contact/Contact'
 export default function App() {
+
   return (
     <>
-      <Header />
-      <Login />
+    <BrowserRouter>
+     <Header/>
+    <Routes>
+     
+      <Route path='/' element={<Login/>}/>
+      <Route path='/contact' element={<Contact/>}/>
 
-      <Footer />
+    
+    </Routes>
+    <Footer/>
+    
+      </BrowserRouter>
     </>
   )
 }

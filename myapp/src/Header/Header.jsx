@@ -40,20 +40,29 @@
 //     </>
 //   );
 // }
-import React from 'react'
+import React, { useCallback, useMemo } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 export default function Header() {
+  // usecallback and useMemo
+
+
   return (
     <>
       <div className="header">
         <div>Logo </div>
-        <div>
-          Navigation
+        <div className="header-nav">
+          <div>
+            <Link to="/">Home</Link>
+          </div>
+          <div>
+            <Link to="/contact">Contact</Link>
+          </div>
         </div>
         <div>
           <input type="search" />
         </div>
-        </div>
+      </div>
     </>
-  )
+  );
 }
