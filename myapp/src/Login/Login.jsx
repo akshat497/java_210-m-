@@ -19,15 +19,15 @@ export default function () {
     }
   }
 
-    useMemo(()=>{
-      10=20
-      30
-    },[])
+    // useMemo(()=>{
+    //   10=20
+    //   30
+    // },[])
 
 
-    useCallback(()=>{
-     x+y
-    },[username])
+    // useCallback(()=>{
+    //  x+y
+    // },[username])
   return (
     <>
       <div className="Login">
