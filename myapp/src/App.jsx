@@ -29,23 +29,36 @@
 //     </>
 //   );
 // }
-import React from "react";
+import React, { createContext } from "react";
 import Header from "./Header/Header";
 import Footer from "./footer/Footer";
 import Login from "./Login/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./contact/Contact";
-export default function App() {
+import Home from "./Home/Home";
+
+export let userContext=createContext()
+export  function App() {
+
+
+  let name="akshat"
+  let age=25
+  let arr=[1,2,3,4,5]
+
   return (
     <>
       <BrowserRouter>
-        <Header />
+      <userContext.Provider value={{name,age,arr}}>
+        <Header name={name} />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Login name={name} age={age} />} />
+          <Route path="/contact" element={<Contact name={name} age={age} />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
         <Footer />
+        </userContext.Provider>
       </BrowserRouter>
     </>
   );
 }
+    

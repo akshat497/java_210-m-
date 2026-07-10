@@ -1,7 +1,11 @@
 import React from "react";
 import "./Footer.css";
+import { useContext } from "react";
+import { userContext } from "../App";
 
 export default function Footer() {
+  // const {arr } = useContext(userContext);
+  // console.log("inside footer", arr);
   return (
     <footer className="footer">
       <div className="footer-top">
