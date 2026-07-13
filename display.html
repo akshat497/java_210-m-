@@ -70,21 +70,53 @@
         border: 2px solid red;
         padding: 1%;
         display: grid;
-        grid-template-columns: 110px 110px 110px 110px 110px ;
+        grid-template-columns: 110px 110px 110px 110px 110px;
         gap: 40px;
         justify-content: center;
         /* display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow: scroll; */
+              flex-wrap: wrap;
+              justify-content: center;
+              overflow: scroll; */
 
         /* flex-direction: column;
-            justify-content: center;
-            align-items: center; */
+                  justify-content: center;
+                  align-items: center; */
+      }
+      .display:hover {
+        scale: 2;
+      }
+      .animation {
+        /* animation-name: slide;
+              animation-duration: 2s;
+              animation-timing-function: ease-in;
+              animation-delay: 2s;
+              animation-iteration-count: infinite;
+              animation-fill-mode: forwards;
+              animation-play-state: running; */
+
+        animation: slide 2s ease-in 2s infinite alternate;
+      }
+
+      @keyframes slide {
+        0% {
+          background-color: red;
+          transform: translateX(0px) scale(1) rotate(0deg);
+        }
+        50% {
+          background-color: yellow;
+           transform: translateX(100px) scale(1.2) rotate(60deg);
+        }
+        100% {
+          background-color: green;
+          transform: translateX(0px) scale(1) rotate(0deg);
+        }
       }
     </style>
   </head>
   <body>
+    <!-- animation in css -->
+
+    <div class="display animation">1</div>
     <!-- //display properties in css -->
 
     <div class="parent">
@@ -102,7 +134,7 @@
       <div class="display" id="display4">4</div>
       <div class="display" id="display4">4</div>
       <div class="display" id="display4">4</div>
-            <div class="display" id="display4">4</div>
+      <div class="display" id="display4">4</div>
       <div class="display" id="display4">4</div>
       <div class="display" id="display4">4</div>
       <div class="display" id="display4">4</div>
