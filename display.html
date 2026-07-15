@@ -59,6 +59,8 @@
         margin: 4%;
         border: 2px solid black;
         padding: 1%;
+        background-color: black;
+        opacity: 1;
         /* display: inline; */
         /* display: inline-block; */
         /* display: block; */
@@ -98,6 +100,15 @@
       }
 
       @keyframes slide {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* @keyframes slide {
         0% {
           background-color: red;
           transform: translateX(0px) scale(1) rotate(0deg);
@@ -110,16 +121,45 @@
           background-color: green;
           transform: translateX(0px) scale(1) rotate(0deg);
         }
+      } */
+
+      .container{
+        display: flex;
+        gap: 20px;
+        font-size: larger;
+        font-weight: bolder;
+        border: 1px solid black;
+        padding :1%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .content{
+        /* border: 1px solid red; */
+        padding: 1%;
+        animation: moving 10s linear infinite ;
+      }
+      @keyframes moving {
+        from{
+          transform: translateX(-800px);
+
+        }to{
+            transform: translateX(800px) scale(1.1);
+
+        }
+        
       }
     </style>
   </head>
   <body>
     <!-- animation in css -->
 
-    <div class="display animation">1</div>
+    <!-- <div class="display animation">1</div> -->
     <!-- //display properties in css -->
 
-    <div class="parent">
+    <!-- <div class="parent">
+
+
       <div class="display" id="display1">1</div>
       <div class="display" id="display2">2</div>
       <div class="display" id="display3">3</div>
@@ -144,6 +184,14 @@
       <div class="display" id="display4">4</div>
       <div class="display" id="display4">4</div>
       <div class="display" id="display4">4</div>
+    </div> -->
+
+    <div class="container">
+      <div class="content">Javascript</div>
+      <div class="content">web development</div>
+      <div class="content">java programming</div>
+      <div class="content">python full stack</div>
+      <div class="content">digital marketing</div>
     </div>
   </body>
 </html>
