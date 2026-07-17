@@ -123,35 +123,60 @@
         }
       } */
 
-      .container{
+      .container {
         display: flex;
         gap: 20px;
         font-size: larger;
         font-weight: bolder;
         border: 1px solid black;
-        padding :1%;
+        padding: 1%;
         align-items: center;
         justify-content: center;
         overflow: hidden;
       }
-      .content{
+      .content {
         /* border: 1px solid red; */
         padding: 1%;
-        animation: moving 10s linear infinite ;
+        animation: moving 10s linear infinite;
       }
       @keyframes moving {
-        from{
+        from {
           transform: translateX(-800px);
-
-        }to{
-            transform: translateX(800px) scale(1.1);
-
         }
-        
+        to {
+          transform: translateX(800px) scale(1.1);
+        }
+      }
+
+      .ball {
+        position: relative;
+        top: 100px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid red;
+        border-radius: 50%;
+        animation: bounce 1s ease-in infinite alternate;
+      }
+
+      .floor {
+        border-bottom: 2px solid black;
+        position: relative;
+        top: 100px;
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translateY(-60px) translateX(0px);
+        }
+        to {
+          transform: translateY(0px) translateX(100px);
+        }
       }
     </style>
   </head>
   <body>
+    <div class="ball"></div>
+    <div class="floor"></div>
     <!-- animation in css -->
 
     <!-- <div class="display animation">1</div> -->
@@ -186,12 +211,12 @@
       <div class="display" id="display4">4</div>
     </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="content">Javascript</div>
       <div class="content">web development</div>
       <div class="content">java programming</div>
       <div class="content">python full stack</div>
       <div class="content">digital marketing</div>
-    </div>
+    </div> -->
   </body>
 </html>
